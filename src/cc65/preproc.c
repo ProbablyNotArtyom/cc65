@@ -1176,6 +1176,8 @@ static void DoPragma (void)
 ** the _Pragma() compiler operator.
 */
 {
+	/* Expand any macros in this line */
+	PreprocessLine ();
     /* Skip blanks following the #pragma directive */
     SkipWhitespace (0);
 
